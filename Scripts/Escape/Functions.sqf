@@ -90,21 +90,13 @@ drn_fnc_Escape_FindGoodPos = {
         _isOk = false;
         while {!_isOk} do {
 			_randomNumber = random 100;
-            if (_randomNumber > 75) then {
-                _startPos = + [8200 + random 6000, 6200 + random 4800]; // Most difficult place
+            if (_randomNumber > 50) then {
+                _startPos = + [1000 + random 5000, 0 + random 4000]; // Most difficult place
             }
             else {
-                if (_randomNumber > 50) then {
-                    _startPos = + [3000 + random 10000, 10000 + random 14000]; // Difficult place
-                }
-                else {
-                    if (_randomNumber > 25) then {
-                    _startPos = + [15000 + random 10000, 4000 + random 11000]; // Difficult place
-					}
-					else {
-						_startPos = + [13000 + random 16000, 14000 + random 11000]; // Easiest place
-					};
-                };
+                
+                    _startPos = + [2000 + random 5000, 4000 + random 3700]; // Difficult place
+                
             };
             
             //diag_log ("startPos == " + str _startPos);
