@@ -3,7 +3,7 @@ private ["_volume", "_dynamicWeather", "_isJipPlayer"];
 private ["_showIntro", "_showPlayerMapAndCompass", "_fog", "_playerIsImmortal", "_playersEnteredWorld"];
 call compileFinal preprocessFileLineNumbers "FAR_revive\FAR_revive_init.sqf";
 
-
+// commit test
 Hijack_addAction =
 {
 
