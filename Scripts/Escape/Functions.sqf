@@ -84,20 +84,26 @@ drn_fnc_Escape_OnSpawnGeneralSoldierUnit = {
 
 drn_fnc_Escape_FindGoodPos = {
 	private ["_i", "_startPos", "_isOk", "_result", "_roadSegments", "_dummyObject"];
-    
+    private ["_randomNumber"];
     // Choose a random and flat position (for-loopen and markers are for test on new maps).
     for [{_i = 0},  {_i < 1}, {_i = _i + 1}] do {
         _isOk = false;
         while {!_isOk} do {
-            if (random 100 > 60) then {
-                _startPos = + [8000 + random 5000, 4000 + random 6000]; // Most difficult place
+			_randomNumber = random 100;
+            if (_randomNumber > 75) then {
+                _startPos = + [8200 + random 6000, 6200 + random 4800]; // Most difficult place
             }
             else {
-                if (random 100 > 50) then {
-                    _startPos = + [4000 + random 9000, 3000 + random 6000]; // Difficult place
+                if (_randomNumber > 50) then {
+                    _startPos = + [3000 + random 10000, 10000 + random 14000]; // Difficult place
                 }
                 else {
-                    _startPos = + [500 + random 12500, 500 + random 12500]; // Easiest place
+                    if (_randomNumber > 25) then {
+                    _startPos = + [15000 + random 10000, 4000 + random 11000]; // Difficult place
+					}
+					else {
+						_startPos = + [13000 + random 16000, 14000 + random 11000]; // Easiest place
+					};
                 };
             };
             
