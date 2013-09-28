@@ -9,7 +9,7 @@ _searchAreaMarkerName = _this select 0;
 if (count _this > 1) then {_debug = _this select 1;} else {_debug = false;};
 
 _marker = "";
-_worldSizeXY = 8000;
+_worldSizeXY = 20000;
 _searchAreaDiamSmall = 200;
 _searchAreaDiamMedium = 700;
 _searchAreaDiamLarge = 1500;
