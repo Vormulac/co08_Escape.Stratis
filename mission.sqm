@@ -5,12 +5,14 @@ class Mission
 	{
 		"a3_map_stratis",
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_beta"
+		"a3_characters_f_beta",
+		"A3_Soft_F_TruckHeavy"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
+		"A3_Soft_F_TruckHeavy",
 		"a3_map_stratis"
 	};
 	randomSeed=16426086;
@@ -45,7 +47,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={3354.4248,48.189041,4046.7271};
+					position[]={3768.3047,144.43973,4353.7446};
 					azimut=76.821701;
 					id=0;
 					side="WEST";
@@ -59,7 +61,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3353.0657,47.832874,4048.0195};
+					position[]={3766.9456,144.94305,4355.0371};
 					special="NONE";
 					id=1;
 					side="WEST";
@@ -72,7 +74,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3352.1443,47.843403,4047.2261};
+					position[]={3766.0242,144.02023,4354.2437};
 					special="NONE";
 					id=2;
 					side="WEST";
@@ -85,7 +87,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3354.5005,47.957752,4048.3838};
+					position[]={3768.3804,145.69386,4355.4014};
 					special="NONE";
 					id=3;
 					side="WEST";
@@ -98,7 +100,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={3353.2944,48.258495,4045.3789};
+					position[]={3767.1743,143.08388,4352.3965};
 					special="NONE";
 					id=4;
 					side="WEST";
@@ -111,7 +113,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={3351.791,47.971039,4046.0786};
+					position[]={3765.6709,143.11217,4353.0962};
 					special="NONE";
 					id=5;
 					side="WEST";
@@ -124,7 +126,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={3354.8154,48.446415,4045.3403};
+					position[]={3768.6953,143.50917,4352.3579};
 					special="NONE";
 					id=6;
 					side="WEST";
@@ -137,7 +139,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={3356.21,48.508217,4046.0439};
+					position[]={3770.0898,144.39941,4353.0615};
 					special="NONE";
 					id=7;
 					side="WEST";
@@ -167,6 +169,19 @@ class Mission
 					text="server";
 				};
 			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3741.9399,146.63371,4374.0049};
+			azimut=-87.723358;
+			id=9;
+			side="EMPTY";
+			vehicle="O_Truck_02_transport_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers
@@ -301,13 +316,13 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={5032.2769,15.3072,6790.3701};
+			position[]={5019.0967,3.8916554,6819.9624};
 			name="drn_Escape_ExtractionPos4";
 			type="Empty";
 		};
 		class Item22
 		{
-			position[]={4979.2183,14.302606,6807.6045};
+			position[]={4978.2236,4.8422756,6827.9961};
 			name="drn_Escape_ExtractionPos4_1";
 			type="Empty";
 		};
