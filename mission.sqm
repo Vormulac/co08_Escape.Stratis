@@ -5,8 +5,7 @@ class Mission
 	{
 		"a3_map_stratis",
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_beta",
-		"A3_Air_F_Beta_Heli_Attack_02"
+		"a3_characters_f_beta"
 	};
 	addOnsAuto[]=
 	{
@@ -172,7 +171,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=36;
+		items=37;
 		class Item0
 		{
 			position[]={1732.15,5.5,5537.5425};
@@ -230,13 +229,13 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={1981.5986,0.066857599,4507.6226};
+			position[]={2095.8345,2.4920228,4496.6387};
 			name="drn_Escape_ExtractionPos8";
 			type="Empty";
 		};
 		class Item10
 		{
-			position[]={1968.95,-0.022241106,4459.7041};
+			position[]={2083.1855,3.1526465,4448.7202};
 			name="drn_Escape_ExtractionPos8_1";
 			type="Empty";
 		};
@@ -248,7 +247,7 @@ class Mission
 		};
 		class Item12
 		{
-			position[]={1867.7653,0.00052844622,2930.7319};
+			position[]={1909.792,2.1809375,2960.5737};
 			name="drn_Escape_ExtractionPos7";
 			type="Empty";
 		};
@@ -260,13 +259,13 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={1885.3549,0.0076015461,2894.5034};
+			position[]={1927.879,2.4558387,2928.5723};
 			name="drn_Escape_ExtractionPos7_1";
 			type="Empty";
 		};
 		class Item15
 		{
-			position[]={2068.8613,0.000274544,1826.4766};
+			position[]={2409.6133,17.523941,760.2417};
 			name="drn_Escape_ExtractionPos6";
 			type="Empty";
 		};
@@ -278,19 +277,19 @@ class Mission
 		};
 		class Item17
 		{
-			position[]={2092.7644,0.023271112,1784.064};
+			position[]={2433.5164,19.426252,717.8291};
 			name="drn_Escape_ExtractionPos6_1";
 			type="Empty";
 		};
 		class Item18
 		{
-			position[]={3068.5339,0.00021114969,6510.1016};
+			position[]={3186.4309,3.7192993,6499.8496};
 			name="drn_Escape_ExtractionPos5_1";
 			type="Empty";
 		};
 		class Item19
 		{
-			position[]={3072.3396,-2.0058505e-005,6555.3105};
+			position[]={3190.2366,2.8312225,6545.0586};
 			name="drn_Escape_ExtractionPos5";
 			type="Empty";
 		};
@@ -302,13 +301,13 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={5060.5957,3.0434941e-005,6861.5879};
+			position[]={5032.2769,15.3072,6790.3701};
 			name="drn_Escape_ExtractionPos4";
 			type="Empty";
 		};
 		class Item22
 		{
-			position[]={5007.5371,-7.6776909e-005,6878.8223};
+			position[]={4979.2183,14.302606,6807.6045};
 			name="drn_Escape_ExtractionPos4_1";
 			type="Empty";
 		};
@@ -320,13 +319,13 @@ class Mission
 		};
 		class Item24
 		{
-			position[]={6169.8408,0.10281468,4358.959};
+			position[]={5989.3232,14.304878,4227.1455};
 			name="drn_Escape_ExtractionPos3";
 			type="Empty";
 		};
 		class Item25
 		{
-			position[]={6202.5229,-0.024196263,4403.2988};
+			position[]={6044.9121,14.436246,4192.3145};
 			name="drn_Escape_ExtractionPos3_1";
 			type="Empty";
 		};
@@ -338,13 +337,13 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={5237.7583,2.0344112e-005,3330.7202};
+			position[]={4692.2227,12.931426,2833.1528};
 			name="drn_Escape_ExtractionPos2_1";
 			type="Empty";
 		};
 		class Item28
 		{
-			position[]={5236.9829,-6.4284031e-008,3348.5356};
+			position[]={4722.8379,15.222164,2844.1978};
 			name="drn_Escape_ExtractionPos2";
 			type="Empty";
 		};
@@ -356,19 +355,19 @@ class Mission
 		};
 		class Item30
 		{
-			position[]={3659.1287,1.6257069e-008,2077.6084};
+			position[]={2583.3416,18.706213,402.81885};
 			name="drn_Escape_ExtractionPos1";
 			type="Empty";
 		};
 		class Item31
 		{
-			position[]={3669.6079,0,2086.5186};
+			position[]={2596.8469,17.485495,389.94043};
 			name="drn_Escape_ExtractionPos1_1";
 			type="Empty";
 		};
 		class Item32
 		{
-			position[]={5052.0957,0.080789596,770.91504};
+			position[]={3976.1858,0.17534181,-916.34229};
 			name="drn_Escape_ExtracionBoatSpawnPos1";
 			type="Empty";
 		};
@@ -392,6 +391,13 @@ class Mission
 			name="Boot_Hill";
 			type="Empty";
 			colorName="ColorGreen";
+		};
+		class Item36
+		{
+			position[]={4155.3608,161.01759,3322.9629};
+			name="RoadBlockNullRoad";
+			type="Empty";
+			colorName="ColorRed";
 		};
 	};
 	class Sensors

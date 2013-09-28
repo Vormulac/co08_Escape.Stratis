@@ -55,7 +55,7 @@ if (str _mannedVehicleClasses == """RU""") then {
     _isFaction = true;
 };
 if (str _mannedVehicleClasses == """INS""") then {
-    _possibleVehicleTypes = ["O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F", "O_APC_Wheeled_02_rcws_F", "O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F"];
+    _possibleVehicleTypes = ["O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F"];
     _isFaction = true;
 };
 if (str _mannedVehicleClasses == """GUE""") then {

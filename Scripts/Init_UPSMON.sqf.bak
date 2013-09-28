@@ -31,7 +31,7 @@ if (!isServer && hasInterface ) exitWith {};
 //ace_sys_wounds_noai = false; // set it as required // Not used (yet?) in ArmA 3
 
 //1=Enable or 0=disable debug. In debug could see a mark positioning de leader and another mark of the destination of movement, very useful for editing mission
-KRON_UPS_Debug = 1;
+KRON_UPS_Debug = 0;
 
 //1=Enable or 0=disable. In game display global chat info about who just killed a civilian. 
 //numbers of Civilians killed by players could be read from array 'KILLED_CIV_COUNTER' -> [Total, by West, by East, by Res, The killer]
@@ -49,7 +49,7 @@ KRON_UPS_Res_enemy = [east]; //dependent on mission settings! ToDo: make this pa
 
 // Distance from destination for searching vehicles. (Search area is about 200m), 
 // If your destination point is further than KRON_UPS_searchVehicledist, AI will try to find a vehicle to go there.
-KRON_UPS_searchVehicledist = 700; // 700, 900  
+KRON_UPS_searchVehicledist = 600; // 700, 900  
 
 //Enables or disables AI to use static weapons
 KRON_UPS_useStatics = true;
@@ -66,7 +66,7 @@ KRON_UPS_groupFormation	= ["COLUMN","STAG COLUMN","WEDGE","ECH LEFT","ECH RIGHT"
 
 //% of chance to use smoke by team members when someone wounded or killed in the group in %(default 13 & 35).
 // set both to 0 -> to switch off this function 
-R_USE_SMOKE_wounded = 10; // org 13: decreased while AI is popping smoke a bit too often
+R_USE_SMOKE_wounded = 13;
 R_USE_SMOKE_killed = 35;
 
 //Height that heli will fly this input will be randomised in a 10%
@@ -79,7 +79,7 @@ KRON_UPS_GUER_SURRENDER = 0;
 
 // knowsAbout 0.5 1.03 , 1.49 to add this enemy to "target list" (1-4) the higher number the less detect ability (original in 5.0.7 was 0.5)
 // it does not mean the AI will not shoot at you. This means: what must be knowsAbout you to UPSMON adds you to the list of targets (UPSMON list of target) 
-R_knowsAboutEnemy = 0.5;
+R_knowsAboutEnemy = 1.49;
 
 // units will react (change the beahaviour) when dead bodies found 
 R_deadBodiesReact = true;  // true OR false // modified so AI will react to dead bodies found
@@ -89,7 +89,7 @@ R_deadBodiesReact = true;  // true OR false // modified so AI will react to dead
 // ---------------------------------------------------------------------------------------------------------------------
 
 //Efective distance for doing perfect ambush (max distance is this x2)
-KRON_UPS_ambushdist = 75; // decreased from 100 to 75, so max distance is 150 m
+KRON_UPS_ambushdist = 50;
 
 //Max distance to target for doing para-drop, will be randomised between 0 and 100% of this value.
 KRON_UPS_paradropdist = 250;
