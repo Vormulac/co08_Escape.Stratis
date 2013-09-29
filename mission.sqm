@@ -13,7 +13,6 @@ class Mission
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
-		"A3_Air_F_Beta_Heli_Attack_02",
 		"a3_map_stratis"
 	};
 	randomSeed=16426086;
@@ -170,18 +169,6 @@ class Mission
 					text="server";
 				};
 			};
-		};
-	};
-	class Vehicles
-	{
-		items=1;
-		class Item0
-		{
-			position[]={3860.666,201.66536,4598.0845};
-			id=9;
-			side="EMPTY";
-			vehicle="O_Heli_Attack_02_F";
-			skill=0.60000002;
 		};
 	};
 	class Markers
