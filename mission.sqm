@@ -6,13 +6,14 @@ class Mission
 		"a3_map_stratis",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
-		"A3_Soft_F_TruckHeavy"
+		"A3_Soft_F_TruckHeavy",
+		"A3_Air_F_Beta_Heli_Attack_02"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
-		"A3_Soft_F_TruckHeavy",
+		"A3_Air_F_Beta_Heli_Attack_02",
 		"a3_map_stratis"
 	};
 	randomSeed=16426086;
@@ -47,7 +48,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={3768.3047,144.43973,4353.7446};
+					position[]={3895.2109,206.53917,4563.9873};
 					azimut=76.821701;
 					id=0;
 					side="WEST";
@@ -61,7 +62,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3766.9456,144.94305,4355.0371};
+					position[]={3894.0894,206.60683,4565.939};
 					special="NONE";
 					id=1;
 					side="WEST";
@@ -74,7 +75,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3766.0242,144.02023,4354.2437};
+					position[]={3893.168,206.61371,4565.1455};
 					special="NONE";
 					id=2;
 					side="WEST";
@@ -87,7 +88,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3768.3804,145.69386,4355.4014};
+					position[]={3895.5242,206.59624,4566.3032};
 					special="NONE";
 					id=3;
 					side="WEST";
@@ -100,7 +101,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={3767.1743,143.08388,4352.3965};
+					position[]={3894.3181,206.53047,4563.2983};
 					special="NONE";
 					id=4;
 					side="WEST";
@@ -113,7 +114,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={3765.6709,143.11217,4353.0962};
+					position[]={3895.0579,206.54912,4564.2783};
 					special="NONE";
 					id=5;
 					side="WEST";
@@ -126,7 +127,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={3768.6953,143.50917,4352.3579};
+					position[]={3895.8391,206.49072,4563.2598};
 					special="NONE";
 					id=6;
 					side="WEST";
@@ -139,7 +140,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={3770.0898,144.39941,4353.0615};
+					position[]={3897.2336,206.51036,4563.9634};
 					special="NONE";
 					id=7;
 					side="WEST";
@@ -176,11 +177,10 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={3741.9399,146.63371,4374.0049};
-			azimut=-87.723358;
+			position[]={3860.666,201.66536,4598.0845};
 			id=9;
 			side="EMPTY";
-			vehicle="O_Truck_02_transport_F";
+			vehicle="O_Heli_Attack_02_F";
 			skill=0.60000002;
 		};
 	};
@@ -195,7 +195,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={3742.5916,176.51964,4447.791};
+			position[]={4009.2781,77.031876,5209.7544};
 			name="center";
 			type="Empty";
 			colorName="ColorGreen";
@@ -232,7 +232,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={2467.8418,14.501923,1203.5781};
+			position[]={2479.5322,8.4214344,1191.8882};
 			name="TrafficMarker_SouthWest";
 			type="Empty";
 		};
@@ -244,25 +244,25 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={2095.8345,2.4920228,4496.6387};
+			position[]={2081.4111,2.5643995,4488.1836};
 			name="drn_Escape_ExtractionPos8";
 			type="Empty";
 		};
 		class Item10
 		{
-			position[]={2083.1855,3.1526465,4448.7202};
+			position[]={2140.3157,2.6168268,4471.1841};
 			name="drn_Escape_ExtractionPos8_1";
 			type="Empty";
 		};
 		class Item11
 		{
-			position[]={385.09671,-0.16286896,4269.3784};
+			position[]={385.09671,0.31821531,4269.3784};
 			name="drn_Escape_ExtracionBoatSpawnPos8";
 			type="Empty";
 		};
 		class Item12
 		{
-			position[]={1909.792,2.1809375,2960.5737};
+			position[]={2045.7451,4.4189343,2241.7515};
 			name="drn_Escape_ExtractionPos7";
 			type="Empty";
 		};
@@ -274,37 +274,37 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={1927.879,2.4558387,2928.5723};
+			position[]={2039.9952,5.2688646,2180.353};
 			name="drn_Escape_ExtractionPos7_1";
 			type="Empty";
 		};
 		class Item15
 		{
-			position[]={2409.6133,17.523941,760.2417};
+			position[]={3128.0632,91.65609,1542.8989};
 			name="drn_Escape_ExtractionPos6";
 			type="Empty";
 		};
 		class Item16
 		{
-			position[]={673.2937,0.0084557682,366.5835};
+			position[]={4338.0552,-0.31571108,884.09424};
 			name="drn_Escape_ExtracionBoatSpawnPos6";
 			type="Empty";
 		};
 		class Item17
 		{
-			position[]={2433.5164,19.426252,717.8291};
+			position[]={3101.3403,91.64257,1508.3433};
 			name="drn_Escape_ExtractionPos6_1";
 			type="Empty";
 		};
 		class Item18
 		{
-			position[]={3186.4309,3.7192993,6499.8496};
+			position[]={3169.3599,2.4881494,6484.6753};
 			name="drn_Escape_ExtractionPos5_1";
 			type="Empty";
 		};
 		class Item19
 		{
-			position[]={3190.2366,2.8312225,6545.0586};
+			position[]={3199.0881,2.3526697,6562.7622};
 			name="drn_Escape_ExtractionPos5";
 			type="Empty";
 		};
@@ -316,13 +316,13 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={5019.0967,3.8916554,6819.9624};
+			position[]={3787.8655,51.61919,7532.9136};
 			name="drn_Escape_ExtractionPos4";
 			type="Empty";
 		};
 		class Item22
 		{
-			position[]={4978.2236,4.8422756,6827.9961};
+			position[]={3675.6594,50.634716,7601.5244};
 			name="drn_Escape_ExtractionPos4_1";
 			type="Empty";
 		};
@@ -334,13 +334,13 @@ class Mission
 		};
 		class Item24
 		{
-			position[]={5989.3232,14.304878,4227.1455};
+			position[]={5962.9473,11.412945,4241.0459};
 			name="drn_Escape_ExtractionPos3";
 			type="Empty";
 		};
 		class Item25
 		{
-			position[]={6044.9121,14.436246,4192.3145};
+			position[]={6019.9219,18.703228,4171.2944};
 			name="drn_Escape_ExtractionPos3_1";
 			type="Empty";
 		};
@@ -352,37 +352,37 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={4692.2227,12.931426,2833.1528};
+			position[]={4634.4009,16.682142,2849.4629};
 			name="drn_Escape_ExtractionPos2_1";
 			type="Empty";
 		};
 		class Item28
 		{
-			position[]={4722.8379,15.222164,2844.1978};
+			position[]={4745.4751,3.8802822,2787.9712};
 			name="drn_Escape_ExtractionPos2";
 			type="Empty";
 		};
 		class Item29
 		{
-			position[]={7216.9028,0.15732221,1899.1313};
+			position[]={6006.0962,-0.04772637,1858.7715};
 			name="drn_Escape_ExtracionBoatSpawnPos2";
 			type="Empty";
 		};
 		class Item30
 		{
-			position[]={2583.3416,18.706213,402.81885};
+			position[]={2640.7913,61.303047,701.75781};
 			name="drn_Escape_ExtractionPos1";
 			type="Empty";
 		};
 		class Item31
 		{
-			position[]={2596.8469,17.485495,389.94043};
+			position[]={2650.8472,64.324905,636.5708};
 			name="drn_Escape_ExtractionPos1_1";
 			type="Empty";
 		};
 		class Item32
 		{
-			position[]={3976.1858,0.17534181,-916.34229};
+			position[]={4026.8894,0.020944051,-664.15967};
 			name="drn_Escape_ExtracionBoatSpawnPos1";
 			type="Empty";
 		};
