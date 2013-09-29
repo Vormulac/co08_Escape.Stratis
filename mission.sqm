@@ -195,7 +195,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={4009.2781,77.031876,5209.7544};
+			position[]={4029.2576,144.90723,4035.9653};
 			name="center";
 			type="Empty";
 			colorName="ColorGreen";

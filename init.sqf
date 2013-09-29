@@ -92,6 +92,7 @@ call compile preprocessFileLineNumbers "Scripts\DRN\CommonLib\CommonLib.sqf";
 call drn_fnc_CL_InitParams;
 
 call compile preprocessFileLineNumbers "Scripts\Escape\Functions.sqf";
+call compile preprocessFileLineNumbers "Scripts\Escape\AIskills.sqf";
 
 [_isJipPlayer] call compile preprocessFileLineNumbers "Briefing.sqf";
 call compile preprocessFileLineNumbers "scripts\Init_UPSMON.sqf";

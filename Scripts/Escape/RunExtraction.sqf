@@ -33,7 +33,7 @@ _boat2 flyinheight 30;
 _boat1 allowFleeing 0;
 _boat2 allowFleeing 0;
 _boat1 setskill 1;
-_boat1 setskill 2;
+_boat2 setskill 1;
  
 sleep 1;
 
