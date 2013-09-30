@@ -6,14 +6,14 @@ class Header
   maxPlayers = 8;
 };
 
-onLoadMission = "ESCAPE STRATIS";
+onLoadMission = "ESCAPE STRATIS v1.0";
 OnLoadMissionTime = FALSE;
 dev = "Engima, ported by Vormulac and Hyperz";
-briefingName = "co 08Escape Stratis";
-author = "Engima of Ostoga Ops, ported by Vormulac";
+briefingName = "co08 Escape Stratis";
+author = "Engima, ported by Vormulac and Hyperz";
 overviewPicture = "a3\Missions_F_Gamma\data\img\MP_COOP_m03_overview_CA.paa";
-overviewText = "Escape Stratis";
-onLoadName = "Escape Stratis";
+overviewText = "Escape Stratis v1.0";
+onLoadName = "Escape Stratis v1.0";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -82,6 +82,4 @@ class Params
 		texts[]={"True (should be fixed)", "False"};
 		default = 1;
 	};	
-
-
 };

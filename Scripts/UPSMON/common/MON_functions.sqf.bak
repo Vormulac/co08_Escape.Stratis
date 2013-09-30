@@ -57,10 +57,10 @@ MON_deleteDeadDist = {private["_u","_s","_dist","_OCercanos","_cicle","_deleted"
 	while {!_deleted} do {	
 		_isplayer = false;
 		//Buscamos objetos cercanos
-		_OCercanos = _u nearentities ["Man" , _dist];		
+		_OCercanos = _u nearentities ["Man", _dist];		
 		
 		//Validamos si alguno de los soldados cerca es un jugador y está vivo
-		{if (isplayer _x) exitwith {_isplayer = true;}}foreach _OCercanos;
+		{if (isplayer _x && alive _x) exitwith {_isplayer = true;}}foreach _OCercanos;
 	
 		if (!_isplayer) then {		
 			deletevehicle _u;	
@@ -700,7 +700,7 @@ MON_NearestLandTransport = {
 		
 	
 	//Buscamos objetos cercanos
-	_OCercanos = _npc nearentities [["Car","TANK","Truck","Motorcycle"], 150];		
+	_OCercanos = _npc nearentities [["Car","TANK","Truck","Motorcycle"] , 150];		
 	
 	{
 		_Cargocount = (_x) emptyPositions "Cargo";
@@ -738,7 +738,7 @@ MON_NearestsLandTransports = {
 	_Drivercount = 0;
 	
 	//Buscamos objetos cercanos
-	_OCercanos = _npc nearentities [["Car","TANK","Truck","Motorcycle"], _distance];
+	_OCercanos = _npc nearentities [["Car","TANK","Truck","Motorcycle"] , _distance];
 		
 	{
 		_Cargocount = (_x) emptyPositions "Cargo";
@@ -817,7 +817,7 @@ MON_NearestsAirTransports = {
 	_Drivercount = 0;
 	
 	//Searching for close vehicle objects
-	_OCercanos = _npc nearentities ["Helicopter", _distance];
+	_OCercanos = _npc nearentities ["Helicopter" , _distance];
 		
 	{
 		_Cargocount = (_x) emptyPositions "Cargo";
@@ -858,7 +858,7 @@ MON_NearestsAirCombat = {
 	
 	
 	//Buscamos objetos cercanos
-	_OCercanos = _npc nearentities ["Helicopter", _distance];
+	_OCercanos = _npc nearentities ["Helicopter" , _distance];
 		
 	{
 		if (_all) then {
@@ -2226,11 +2226,11 @@ MON_nearestSoldiers = {
 	_soldiers = [];
 	
 	//Buscamos objetos cercanos
-	_OCercanos = _npc nearentities ["Man" , _distance];					
+	_OCercanos = _npc nearentities ["Man", _distance];					
 	_OCercanos = _OCercanos - [_npc];			
 	
 	{			
-		if (canmove _x ) then { _soldiers = _soldiers + [_x];};
+		if ( alive _x && canmove _x ) then { _soldiers = _soldiers + [_x];};
 	}foreach _OCercanos;
 	
 	_soldiers;
