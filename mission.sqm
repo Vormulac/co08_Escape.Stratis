@@ -231,13 +231,13 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={2081.4111,2.5643995,4488.1836};
+			position[]={2085.5208,4.9309316,4521.0615};
 			name="drn_Escape_ExtractionPos8";
 			type="Empty";
 		};
 		class Item10
 		{
-			position[]={2140.3157,2.6168268,4471.1841};
+			position[]={2075.8247,3.2028151,4455.6938};
 			name="drn_Escape_ExtractionPos8_1";
 			type="Empty";
 		};
@@ -267,9 +267,10 @@ class Mission
 		};
 		class Item15
 		{
-			position[]={3128.0632,91.65609,1542.8989};
+			position[]={3131.707,90.489471,1550.0122};
 			name="drn_Escape_ExtractionPos6";
 			type="Empty";
+			angle=-60.785118;
 		};
 		class Item16
 		{
@@ -282,18 +283,21 @@ class Mission
 			position[]={3101.3403,91.64257,1508.3433};
 			name="drn_Escape_ExtractionPos6_1";
 			type="Empty";
+			angle=-46.016777;
 		};
 		class Item18
 		{
-			position[]={3169.3599,2.4881494,6484.6753};
+			position[]={3161.5183,2.9983704,6526.022};
 			name="drn_Escape_ExtractionPos5_1";
 			type="Empty";
+			angle=-90.326439;
 		};
 		class Item19
 		{
-			position[]={3199.0881,2.3526697,6562.7622};
+			position[]={3141.7014,2.7677777,6599.4751};
 			name="drn_Escape_ExtractionPos5";
 			type="Empty";
+			angle=-63.273266;
 		};
 		class Item20
 		{
@@ -339,7 +343,7 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={4634.4009,16.682142,2849.4629};
+			position[]={4814.9409,3.0263538,2798.9814};
 			name="drn_Escape_ExtractionPos2_1";
 			type="Empty";
 		};
@@ -357,15 +361,17 @@ class Mission
 		};
 		class Item30
 		{
-			position[]={2640.7913,61.303047,701.75781};
+			position[]={2660.1572,64.595421,659.896};
 			name="drn_Escape_ExtractionPos1";
 			type="Empty";
+			angle=-32.847713;
 		};
 		class Item31
 		{
-			position[]={2650.8472,64.324905,636.5708};
+			position[]={2635.9802,65.611427,610.1626};
 			name="drn_Escape_ExtractionPos1_1";
 			type="Empty";
+			angle=-43.011234;
 		};
 		class Item32
 		{
