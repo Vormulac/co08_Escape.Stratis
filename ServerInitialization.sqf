@@ -559,7 +559,25 @@ if (_useSearchChopper) then {
     _guard disableAI "MOVE";
     _guard setDir _fenceRotateDir + 125;
     _guard setVehicleAmmo 0.3 + random 0.7;
-	removeAllAssignedItems _guard;
+	_guard unassignItem "ItemGPS";
+	_guard unassignItem "ItemMap";
+	_guard unassignItem "ItemCompass";
+	_guard unassignItem "NVGoggles_OPFOR";
+    _guard removeItem "ItemMap";
+    _guard removeItem "ItemCompass";
+    _guard removeItem "ItemGPS";
+	_guard removeItem "NVGoggles_OPFOR";
+	_guard addItem "Medikit";
+	_guard removeItem "FirstAidKit";
+	if(random 100 < 70) then {
+		_guard removePrimaryWeaponItem "optic_Aco";
+		_guard removePrimaryWeaponItem "optic_ACO_grn";
+		_guard removePrimaryWeaponItem "optic_Hamr";
+		_guard removePrimaryWeaponItem "optic_Holosight";
+		_guard removePrimaryWeaponItem "optic_Arco";
+		_guard removePrimaryWeaponItem "optic_MRCO";
+		_guard removePrimaryWeaponItem "optic_SOS";
+	};
 	
     //_guard setSkill _enemyMinSkill + random (_enemyMaxSkill - _enemyMinSkill);
     [_guard, drn_var_Escape_enemyMinSkill] call EGG_EVO_skill;
