@@ -23,7 +23,14 @@ if (count _firstDestinationPos > 0) then {
     _destinationPos = + _firstDestinationPos;
 }
 else {
-    _roadSegments = _vehicle nearRoads 2000;
+    _trafficLocation = floor random 4;
+	switch (_trafficLocation) do {
+		case 0: { _roadSegments = (getMarkerPos "TrafficMarker_SouthWest") nearRoads 300; };
+		case 1: { _roadSegments = (getMarkerPos "TrafficMarker_NorthWest") nearRoads 300; };
+		case 2: { _roadSegments = (getMarkerPos "TrafficMarker_NorthEast") nearRoads 300; };
+		case 3: { _roadSegments = (getMarkerPos "TrafficMarker_SouthEast") nearRoads 300; };
+		//default { _roadSegments = drn_allroadSegments };
+	};
     _destinationSegment = _roadSegments select floor random count _roadSegments;
     _destinationPos = getPos _destinationSegment;
 };
@@ -34,7 +41,7 @@ if (_vehicle distance _destinationSegment < 500) then {
 };
 
 _waypoint = group _vehicle addWaypoint [_destinationPos, 10];
-_waypoint setWaypointBehaviour "SAFE";
+_waypoint setWaypointBehaviour "CAreleSS";
 _waypoint setWaypointSpeed _speed;
 _waypoint setWaypointCompletionRadius 10;
 _waypoint setWaypointStatements ["true", "_nil = [" + vehicleVarName _vehicle + ", [], " + str _debug + "] execVM ""Scripts\DRN\MilitaryTraffic\MoveVehicle.sqf"";"];

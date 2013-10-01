@@ -102,9 +102,10 @@ drn_fnc_Escape_FindGoodPos = {
             
             //diag_log ("startPos == " + str _startPos);
             _result = _startPos isFlatEmpty [0, 0, 0.25, 1, 0, false, objNull];
-            _roadSegments = _startPos nearRoads 12;
+            _roadSegments = _startPos nearRoads 30;
+			_buildings = _startPos nearObjects 30;
             
-            if ((count _result > 0) && (count _roadSegments == 0) && (!surfaceIsWater _startPos)) then {
+            if ((count _result > 0) && (count _roadSegments == 0) && (!surfaceIsWater _startPos) && (count _buildings == 0)) then {
                 _dummyObject = "Land_Can_Rusty_F" createVehicleLocal _startPos;
                 
                 if (((nearestBuilding _dummyObject) distance _startPos) > 50) then {
@@ -643,7 +644,7 @@ drn_fnc_Escape_BuildAmmoDepot = {
     // Set markers
     
     _marker = createMarker ["drn_AmmoDepotMapMarker" + str _instanceNo, _middlePos];
-    _marker setMarkerType "hd_objective";
+    _marker setMarkerType "o_installation";
     
     _marker = createMarkerLocal ["drn_AmmoDepotPatrolMarker" + str _instanceNo, _middlePos];
     _marker setMarkerShapeLocal "ELLIPSE";

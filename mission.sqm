@@ -47,7 +47,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={3895.2109,206.53917,4563.9873};
+					position[]={3894.7388,206.64214,4567.4404};
 					azimut=76.821701;
 					id=0;
 					side="WEST";
@@ -61,7 +61,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3894.0894,206.60683,4565.939};
+					position[]={3894.1099,206.63896,4567.0205};
 					special="NONE";
 					id=1;
 					side="WEST";
@@ -74,7 +74,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3893.168,206.61371,4565.1455};
+					position[]={3894.0496,206.65289,4567.4546};
 					special="NONE";
 					id=2;
 					side="WEST";
@@ -87,7 +87,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3895.5242,206.59624,4566.3032};
+					position[]={3895.5242,206.629,4567.395};
 					special="NONE";
 					id=3;
 					side="WEST";
@@ -100,7 +100,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={3894.3181,206.53047,4563.2983};
+					position[]={3894.3704,206.62668,4566.7412};
 					special="NONE";
 					id=4;
 					side="WEST";
@@ -113,7 +113,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={3895.0579,206.54912,4564.2783};
+					position[]={3894.7322,206.61787,4566.6289};
 					special="NONE";
 					id=5;
 					side="WEST";
@@ -126,7 +126,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={3895.8391,206.49072,4563.2598};
+					position[]={3895.1152,206.61436,4566.7031};
 					special="NONE";
 					id=6;
 					side="WEST";
@@ -139,7 +139,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={3897.2336,206.51036,4563.9634};
+					position[]={3895.407,206.61879,4566.9966};
 					special="NONE";
 					id=7;
 					side="WEST";
@@ -361,7 +361,7 @@ class Mission
 		};
 		class Item30
 		{
-			position[]={2660.1572,64.595421,659.896};
+			position[]={2420.0024,23.582903,958.95703};
 			name="drn_Escape_ExtractionPos1";
 			type="Empty";
 			angle=-32.847713;

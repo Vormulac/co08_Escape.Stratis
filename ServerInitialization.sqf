@@ -15,7 +15,7 @@ _useVillagePatrols = true;
 _useMilitaryTraffic = true;
 _useAmbientInfantry = true;
 _useSearchChopper = true;
-_useRoadBlocks = (paramsArray select 6) == 1;
+_useRoadBlocks = true;
 
 _guardsExist = true;
 _comCenGuardsExist = true;
@@ -109,46 +109,19 @@ if (true) then {
     _chosenComCenIndexes = [];
 
     _distanceBetween = 1500;
-    
-    while {count _chosenComCenIndexes < 3} do {
-        _index = floor random count drn_arr_communicationCenterMarkers;
-        _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
+	_commCentreMarkers = drn_arr_communicationCenterMarkers;
+    while {count _chosenComCenIndexes < 3 && count _commCentreMarkers > 0} do {
         
-        // North west
-        if (count _chosenComCenIndexes == 0) then {
-            while {_currentPos select 0 > (getMarkerPos "center") select 0 || _currentPos select 1 < (getMarkerPos "center") select 1} do {
-                _index = floor random count drn_arr_communicationCenterMarkers;
-                _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
-            };
-        };
-        // North east
-        if (count _chosenComCenIndexes == 1) then {
-            while {_currentPos select 0 < (getMarkerPos "center") select 0 || _currentPos select 1 < (getMarkerPos "center") select 1} do {
-                _index = floor random count drn_arr_communicationCenterMarkers;
-                _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
-            };
-        };
-        // South east
-        if (count _chosenComCenIndexes == 2) then {
-            while {_currentPos select 0 < (getMarkerPos "center") select 0 || _currentPos select 1 > (getMarkerPos "center") select 1} do {
-                _index = floor random count drn_arr_communicationCenterMarkers;
-                _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
-            };
-        };
-        // South west
-        if (count _chosenComCenIndexes == 3) then {
-            while {_currentPos select 0 > (getMarkerPos "center") select 0 || _currentPos select 1 > (getMarkerPos "center") select 1} do {
-                _index = floor random count drn_arr_communicationCenterMarkers;
-                _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
-            };
-        };
+        _index = floor random count _commCentreMarkers;
+		_currentPos = (_commCentreMarkers select _index) select 0;
+
         
         if (!(_index in _chosenComCenIndexes)) then {
-            _currentPos = (drn_arr_communicationCenterMarkers select _index) select 0;
+            _currentPos = (_commCentreMarkers select _index) select 0;
 
             _tooClose = false;
             {
-                _pos = (drn_arr_communicationCenterMarkers select _x) select 0;
+                _pos = (_commCentreMarkers select _x) select 0;
                 if (_pos distance _currentPos < _distanceBetween) then {
                     _tooClose = true;
                 };
@@ -159,7 +132,10 @@ if (true) then {
             
             if (!_tooClose) then {
                 _chosenComCenIndexes set [count _chosenComCenIndexes, _index];
-            };
+            }
+			else {
+				_commCentreMarkers = _commCentreMarkers - [_commCentreMarkers select _index];
+			};
         };
     };
     
@@ -583,25 +559,8 @@ if (_useSearchChopper) then {
     _guard disableAI "MOVE";
     _guard setDir _fenceRotateDir + 125;
     _guard setVehicleAmmo 0.3 + random 0.7;
-	_guard unassignItem "ItemGPS";
-	_guard unassignItem "ItemMap";
-	_guard unassignItem "ItemCompass";
-	_guard unassignItem "NVGoggles_OPFOR";
-    _guard removeItem "ItemMap";
-    _guard removeItem "ItemCompass";
-    _guard removeItem "ItemGPS";
-	_guard removeItem "NVGoggles_OPFOR";
-	_guard addItem "Medikit";
-	_guard removeItem "FirstAidKit";
-	if(random 100 < 70) then {
-		_guard removePrimaryWeaponItem "optic_Aco";
-		_guard removePrimaryWeaponItem "optic_ACO_grn";
-		_guard removePrimaryWeaponItem "optic_Hamr";
-		_guard removePrimaryWeaponItem "optic_Holosight";
-		_guard removePrimaryWeaponItem "optic_Arco";
-		_guard removePrimaryWeaponItem "optic_MRCO";
-		_guard removePrimaryWeaponItem "optic_SOS";
-	};
+	removeAllAssignedItems _guard;
+	
     //_guard setSkill _enemyMinSkill + random (_enemyMaxSkill - _enemyMinSkill);
     [_guard, drn_var_Escape_enemyMinSkill] call EGG_EVO_skill;
     // _guard addMagazine drn_var_Escape_InnerFenceGuardSecondaryWeaponMagazine;
