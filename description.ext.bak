@@ -79,7 +79,7 @@ class Params
 		//paramsArray[6]
 		title="Village Patrol Spawns";
 		values[]={80000, 40000, 10000};
-		texts[]={"Low (better performance)", "Medium", "High (Very demanding)"};
+		texts[]={"Low (better Performance)", "Medium", "High (for good rigs)"};
 		default = 40000;
 	};
 };
