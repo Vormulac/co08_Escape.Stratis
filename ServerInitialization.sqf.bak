@@ -306,8 +306,8 @@ if (_useMotorizedSearchGroup) then {
     _enemyFrequency = _this select 9;
     _useRoadBlocks = _this select 10;
     _debugRoadBlocks = _this select 11;
-	_villagePatrolSpawnArea = _this select 12;
-    
+    _villagePatrolSpawnArea = _this select 12;
+	
     waitUntil {[drn_startPos] call drn_fnc_Escape_AllPlayersOnStartPos};
     _playerGroup = group ((call drn_fnc_Escape_GetPlayers) select 0);
     
@@ -527,7 +527,7 @@ if (_useMotorizedSearchGroup) then {
             _roadBlockCount = 1;
         };
         
-        [_playerGroup, east, drn_arr_Escape_InfantryTypes, drn_arr_Escape_RoadBlock_MannedVehicleTypes, _roadBlockCount, _enemySpawnDistance, _enemySpawnDistance + 500, 750, 300, _fnc_OnSpawnInfantryGroup, _fnc_OnSpawnMannedVehicle, _debugRoadBlocks] execVM "Scripts\DRN\RoadBlocks\RoadBlocks.sqf";
+        [_playerGroup, east, drn_arr_Escape_InfantryTypes, drn_arr_Escape_RoadBlock_MannedVehicleTypes, _roadBlockCount, _enemySpawnDistance, _enemySpawnDistance + 500, 500, 300, _fnc_OnSpawnInfantryGroup, _fnc_OnSpawnMannedVehicle, _debugRoadBlocks] execVM "Scripts\DRN\RoadBlocks\RoadBlocks.sqf";
         sleep 0.25;
     };
 };
