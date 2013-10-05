@@ -6,19 +6,20 @@ class Header
   maxPlayers = 8;
 };
 
-onLoadMission = "ESCAPE STRATIS v1.4";
+onLoadMission = "ESCAPE STRATIS v1.5";
 OnLoadMissionTime = FALSE;
 dev = "Engima, ported by Vormulac and Hyperz";
 briefingName = "co08 Escape Stratis";
 author = "Engima, ported by Vormulac and Hyperz";
 overviewPicture = "a3\Missions_F_Gamma\data\img\MP_COOP_m03_overview_CA.paa";
-overviewText = "Escape Stratis v1.4";
-onLoadName = "Escape Stratis v1.4";
+overviewText = "Escape Stratis v1.5";
+onLoadName = "Escape Stratis v1.5";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 Respawn = "BASE";
 disabledAI = 1;
+//enableDebugConsole = 2;
 
 // Include revive script resources
 
