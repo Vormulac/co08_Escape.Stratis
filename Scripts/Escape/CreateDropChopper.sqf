@@ -25,7 +25,8 @@ if (isNil "drn_CreateDropChopper_CurrentInstanceNo") then {
 _currentInstanceNo = drn_CreateDropChopper_CurrentInstanceNo;
 drn_CreateDropChopper_CurrentInstanceNo = drn_CreateDropChopper_CurrentInstanceNo + 1;
 
-_chopper = _chopperType createVehicle _spawnPos;
+//_chopper = _chopperType createVehicle _spawnPos;
+_chopper = createVehicle [_chopperType, _spawnPos, [], 0, "NONE"];
 _vehicleVarName = "drn_searchChopper" + str _currentInstanceNo;
 _chopper setVehicleVarName _vehicleVarName;
 _chopper Call Compile Format ["%1 = _this; PublicVariable ""%1""", _vehicleVarName];
@@ -37,9 +38,11 @@ _chopper Call Compile Format ["%1 = _this; PublicVariable ""%1""", _vehicleVarNa
 
 _group = createGroup _side;
 
-_crewType createUnit [[0, 0, 30], _group, "", (_minSkill + random (_maxSkill - _minSkill)), "LIEUTNANT"];
-_crewType createUnit [[0, 0, 30], _group, "", (_minSkill + random (_maxSkill - _minSkill)), "LIEUTNANT"];
 //_crewType createUnit [[0, 0, 30], _group, "", (_minSkill + random (_maxSkill - _minSkill)), "LIEUTNANT"];
+//_crewType createUnit [[0, 0, 30], _group, "", (_minSkill + random (_maxSkill - _minSkill)), "LIEUTNANT"];
+//_crewType createUnit [[0, 0, 30], _group, "", (_minSkill + random (_maxSkill - _minSkill)), "LIEUTNANT"];
+_group createUnit [_crewType, [0, 0, 30], [], 0, "FORM"];
+_group createUnit [_crewType, [0, 0, 30], [], 0, "FORM"];
 
 _pilot = (units _group) select 0;
 _gunner1 = (units _group) select 1;
@@ -53,6 +56,7 @@ _gunner1 moveInTurret [_chopper, [0]];
 // _gunner2 moveInTurret [_chopper, [1]];
 
 {
+    _x setUnitRank "LIEUTNANT";
     _x call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;
 } foreach units _group;
 

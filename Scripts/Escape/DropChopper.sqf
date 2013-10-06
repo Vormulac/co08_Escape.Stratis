@@ -39,7 +39,8 @@ _chopper setVariable ["missionCompleted", false];
 		player sideChat "Drop chopper dropping cargo...";
 	};
 	
-    
+
+
    for "_i" from 0 to ((count _dropUnits - 1)) step 1 do{
 		_dropUnit = _dropUnits select _i;
 		
@@ -64,15 +65,18 @@ _chopper setVariable ["missionCompleted", false];
 			
 			if(_smokes)then{
 				waitUntil{((getPos _man2)select 2)<10};
-				_smoke = "SmokeShell" createVehicle (getPos _man2);
+				//_smoke = "SmokeShell" createVehicle (getPos _man2);
+				_smoke = createVehicle ["SmokeShell", (getPos _man2), [], 0, "NONE"];
 			};
 			if(_flares)then{
 				waitUntil{((getPos _man2)select 2)<5};
-				_flare = "F_40mm_Red" createVehicle [(getPos _man2) select 0,(getPos _man2) select 1,0]; //Chemlight_red
+				//_flare = "F_40mm_Red" createVehicle [(getPos _man2) select 0,(getPos _man2) select 1,0]; //Chemlight_red
+				_flare = createVehicle ["F_40mm_Red", [(getPos _man2) select 0,(getPos _man2) select 1,0], [], 0, "NONE"];
 			};
 			if(_chems)then{
 				waitUntil{((getPos _man2)select 2)<2};
-				_chem = "Chemlight_red" createVehicle (getPos _man2);
+				//_chem = "Chemlight_red" createVehicle (getPos _man2);
+				_chem = createVehicle ["Chemlight_red", (getPos _man2), [], 0, "NONE"];
 			};
 		};
 		
@@ -84,6 +88,7 @@ _chopper setVariable ["missionCompleted", false];
 	
 
     _dropUnits = units (group (_dropUnits select 0));
+    _dropGroup = group (_dropUnits select 0);
     [_dropGroup, _dropPosition] call _onGroupDropped;
     
 	while {!(_chopper getVariable "missionCompleted")} do {
@@ -101,7 +106,8 @@ _chopper setVariable ["missionCompleted", false];
 };
 
 if (_debug) then {
-	"SmokeShellRed" createVehicle _dropPosition;
+	//"SmokeShellRed" createVehicle _dropPosition;
+	createVehicle ["SmokeShellRed", _dropPosition, [], 0, "NONE"];
 	player sideChat "Drop chopper moving out...";
 };
 

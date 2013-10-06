@@ -154,15 +154,18 @@ while {true} do {
                 if (_surpriseID == "RUSSIANSEARCHCHOPPER") then {
                     private ["_chopper", "_result", "_group"];
                     
-                    _chopper = "O_Heli_Light_02_F" createVehicle getMarkerPos "drn_russianSearchChopperStartPosMarker";
+                    //_chopper = "O_Heli_Light_02_F" createVehicle getMarkerPos "drn_russianSearchChopperStartPosMarker";
+                    _chopper = createVehicle ["O_Heli_Light_02_F", (getMarkerPos "drn_russianSearchChopperStartPosMarker"), [], 0, "NONE"];
                     _chopper lock false;
                     _chopper setVehicleVarName "drn_russianSearchChopper";
                     _chopper call compile format ["%1=_this;", "drn_russianSearchChopper"];
                     
                     _group = createGroup east;
 
-                    "O_Pilot_F" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
-                    "O_Pilot_F" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
+                    //"O_Pilot_F" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
+                    //"O_Pilot_F" createUnit [[0, 0, 30], _group, "", (_minEnemySkill + random (_maxEnemySkill - _minEnemySkill)), "LIEUTNANT"];
+                    _group createUnit ["O_Pilot_F", [0, 0, 30], [], 0, "FORM"];
+                    _group createUnit ["O_Pilot_F", [0, 0, 30], [], 0, "FORM"];
 
                     ((units _group) select 0) assignAsDriver _chopper;
                     ((units _group) select 0) moveInDriver _chopper;
@@ -170,6 +173,7 @@ while {true} do {
                     ((units _group) select 1) moveInGunner _chopper;
                     
                     {
+                        _x setUnitRank "LIEUTNANT";
                         _x call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;
                     } foreach units _group;
                     
