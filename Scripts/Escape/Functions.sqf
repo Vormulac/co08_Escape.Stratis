@@ -45,41 +45,74 @@ drn_fnc_Escape_GetPlayers = {
 };
 
 drn_fnc_Escape_OnSpawnGeneralSoldierUnit = {
+	private["_nighttime"];
     _this setVehicleAmmo (0.2 + random 0.6);
-	_this unassignItem "ItemGPS";
-    _this unassignItem "ItemMap";
-    _this unassignItem "ItemCompass";
-	_this unassignItem "NVGoggles_OPFOR";
-    _this removeItem "ItemGPS";
-    _this removeItem "ItemMap";
-    _this removeItem "ItemCompass";
-    _this removeItem "NVGoggles_OPFOR";
+	if(daytime > 18 OR daytime < 8) then {
+		_nighttime = true;
+	} else {
+		_nighttime = false;
+	};
+	_this unlinkItem "ItemGPS";
+    _this unlinkItem "ItemMap";
+    _this unlinkItem "ItemCompass";
+    if(EAST == side _this) then {
+	   _this unlinkItem "NVGoggles_OPFOR";
+    } else {
+        if(INDEPENDENT == side _this) then {
+            _this unlinkItem "NVGoggles_INDEP";
+        };
+    };
+   
+    
+	
+	
     //_this setSkill (drn_var_Escape_enemyMinSkill + random (drn_var_Escape_enemyMaxSkill - drn_var_Escape_enemyMinSkill));
 	[_this, drn_var_Escape_enemyMinSkill] call EGG_EVO_skill;
     _this removeItem "FirstAidKit";
-	if(random 100 < 70) then {
-		_this removePrimaryWeaponItem "optic_Aco";
-		_this removePrimaryWeaponItem "optic_ACO_grn";
-		_this removePrimaryWeaponItem "optic_Hamr";
-		_this removePrimaryWeaponItem "optic_Holosight";
-		_this removePrimaryWeaponItem "optic_Arco";
-		_this removePrimaryWeaponItem "optic_MRCO";
-		_this removePrimaryWeaponItem "optic_SOS";
-	};
 	
+	//Chance for a random scope (and no scope):
+	if(random 100 < 70) then {
+
+		removeAllPrimaryWeaponItems _this;
+		if((random 100 < 30)) then {
+			_scopes = a3n_arr_Scopes + a3n_arr_TWSScopes;
+			if(_nighttime) then {
+				_scopes = _scopes + a3n_arr_NightScopes;
+			};
+			_scope = _scopes select floor(random(count(_scopes)));
+			_this linkItem _scope;
+		};
+	};
+	//Chance for random attachment
+	if(((random 100 < 15) && (!_nighttime)) OR ((random 100 < 70) && (_nighttime))) then {
+		if(random 100 < 70) then {
+			_this linkItem "acc_flashlight";
+		} else {
+			_this linkItem "acc_pointer_IR";
+		};
+	};
+	//Chance for silencers
+	if(((random 100 < 10) && (!_nighttime)) OR ((random 100 < 40) && (_nighttime))) then {
+		//Not yet
+	};
     if (random 100 < 30) then {
-        _this addItem "ItemMap";
-		_this assignItem "ItemMap";
+        _this linkItem "ItemMap";
     };
-    if (random 100 < 30) then {
-        _this addItem "ItemCompass";
-		_this assignItem "ItemCompass";
+	if (random 100 < 30) then {
+        _this linkItem "ItemMap";
     };
-    if (random 100 < 25) then {
-        if (!(_this hasWeapon "NVGoggles_OPFOR")) then {
-            _this addItem "NVGoggles_OPFOR";
-			_this assignItem "NVGoggles_OPFOR";
-        };
+    if (random 100 < 10) then {
+        _this linkItem "ItemGPS";
+    };
+	if (random 100 < 50) then {
+		if (random 100 < 80) then {
+			_this linkItem "Binocular";
+		} else {
+			_this linkItem "Rangefinder";
+		};
+	};
+    if(((random 100 < 5) && (!_nighttime)) OR ((random 100 < 30) && (_nighttime))) then {
+        _this linkItem "NVGoggles";
     };
 	
 	[_this, drn_var_Escape_enemyMinSkill] call EGG_EVO_skill;

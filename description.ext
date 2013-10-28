@@ -6,20 +6,21 @@ class Header
   maxPlayers = 8;
 };
 
-onLoadMission = "ESCAPE STRATIS v1.5.1";
+onLoadMission = "ESCAPE STRATIS v1.5.2";
 OnLoadMissionTime = FALSE;
-dev = "Engima, ported by Vormulac and Hyperz";
+dev = "Engima, port by Vormulac, Hyperz, and NeoArmageddon";
 briefingName = "co08 Escape Stratis";
-author = "Engima, ported by Vormulac and Hyperz";
+author = "Engima, port by Vormulac, Hyperz, and NeoArmageddon";
 overviewPicture = "a3\Missions_F_Gamma\data\img\MP_COOP_m03_overview_CA.paa";
-overviewText = "Escape Stratis v1.5.1";
-onLoadName = "Escape Stratis v1.5.1";
+overviewText = "Escape Stratis v1.5.2";
+onLoadName = "Escape Stratis v1.5.2";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 Respawn = "BASE";
 disabledAI = 1;
 enableDebugConsole = 1;
+
 
 // Include revive script resources
 
@@ -83,4 +84,14 @@ class Params
 		texts[]={"Low (better performance)", "Medium", "High (Very demanding)"};
 		default = 40000;
 	};
+	class ExtractionSelection
+	{
+		//paramsArray[7]
+		title="Extraction Points";
+		values[]={0, 1, 2};
+		texts[]={"Random", "Close", "Far"};
+		default = 0;
+	};
 };
+
+
