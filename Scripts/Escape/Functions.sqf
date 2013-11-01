@@ -70,6 +70,8 @@ drn_fnc_Escape_OnSpawnGeneralSoldierUnit = {
     if(drn_var_Escape_enemyMinSkill != 5) then {
 	   [_this, drn_var_Escape_enemyMinSkill] call EGG_EVO_skill;
     };
+
+    //player sideChat str (precision _this);
     _this removeItem "FirstAidKit";
 	
 	//Chance for a random scope (and no scope):
@@ -101,7 +103,7 @@ drn_fnc_Escape_OnSpawnGeneralSoldierUnit = {
         _this linkItem "ItemMap";
     };
 	if (random 100 < 30) then {
-        _this linkItem "ItemMap";
+        _this linkItem "ItemCompass";
     };
     if (random 100 < 10) then {
         _this linkItem "ItemGPS";
